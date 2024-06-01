@@ -1,0 +1,47 @@
+#include<stdio.h>
+// function for maximum element 
+int max_element(int arr[], int m) 
+{
+    int i = 1, max = arr[0];
+    while (i < m) 
+    {
+        if (arr[i] > max) 
+        {
+            max = arr[i];
+        }
+        i++;
+    }
+    return max;
+}
+// function for minimum element 
+int min_element(int arr[], int m) 
+{
+    int i = 1, min = arr[0];
+    while (i < m) 
+    {
+        if (arr[i] < min) 
+        {
+            min = arr[i];
+        }
+        i++;
+    }
+    return min;
+}
+int main() 
+{
+    int n;
+    printf("Enter the array size: ");
+    scanf("%d", &n);// size of array 
+    int arr[n];
+    // taking elements of array
+    printf("Enter the elements of array: \n");
+    for (int i = 0; i < n; i++) 
+    {
+        scanf("%d", &arr[i]);
+    }
+    int a = max_element(arr, n);
+    printf("Maximum element of array is: %d \n", a);
+    int b = min_element(arr, n);
+    printf("Minimum element of array is: %d", b);
+    return 0;
+}
