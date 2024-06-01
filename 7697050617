@@ -1,0 +1,13 @@
+int main() 
+{
+  int n , fact=1;
+  printf("Enter the value for factorial : ");
+  scanf("%d",&n);             // taking input from user for factorial 
+  while(n)
+  {
+      fact*=n;    // storing value in fact
+      n--;
+  }
+  printf("Factorial is : %d",fact);    // print the output 
+  return 0;
+}
