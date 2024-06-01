@@ -1,0 +1,19 @@
+#include<stdio.h>
+// function for finding size of string 
+int size(char str[100])
+{
+    int i=0;
+    while (str[i]!='\0')
+    {    
+         i++;
+    }
+    return i;
+}
+int main()
+{
+    char str[100];
+    printf("Enter the string: ");
+    scanf("%s",str);    // taking string as input from user
+    printf("size of string is %d",size(str));
+    return 0;
+}
