@@ -1,0 +1,31 @@
+#include <stdio.h>
+// This code take last position element as input
+// function for printing series 
+void Fibonacci(int n) 
+{
+    if (n <= 0) 
+    {
+        printf("Please enter a positive integer greater than 0.\n");
+        return;
+    }
+    int a = 0, b = 1, next;
+    printf("Fibonacci series up to %d:\n", n);
+    printf("%d, %d", a, b);
+    next = a + b;
+    while (next <= n) 
+    {
+        printf(", %d", next);
+        a = b;
+        b = next;
+        next = a + b;
+    }
+    printf("\n");
+}
+int main() {
+    int n;    
+    // Take input from user
+    printf("Enter the limit for Fibonacci series: ");
+    scanf("%d", &n);
+    Fibonacci(n);
+    return 0;
+}
