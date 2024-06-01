@@ -1,0 +1,23 @@
+#include<stdio.h>
+// calculate sum through recursion 
+int add( int n)
+{
+    int sum=0,r;
+    if(n==0)
+        return 0;
+    else
+    {
+        r=n%10;
+        sum+=r;
+        return sum+add(n/10);
+    }
+}
+int main()
+{
+    int n ;
+    printf("Enter the number: ");
+    scanf("%d",&n);    // taking input from user 
+    // print the output 
+    printf("sum of the number is : %d",add(n));
+    return 0;
+}
